@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyBMI</string>
+    <string name="strCalc">計算</string>
+    <string name="strInputHeight">請輸入身高</string>
+    <string name="strInputWeight">請輸入體重</string>
+</resources>
