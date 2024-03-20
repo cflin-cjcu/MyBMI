@@ -4,4 +4,5 @@
     <string name="strCalc">計算</string>
     <string name="strInputHeight">請輸入身高</string>
     <string name="strInputWeight">請輸入體重</string>
+    <string name="strShowbmi">"你的BMI是 "</string>
 </resources>
