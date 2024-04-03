@@ -96,4 +96,34 @@
 
 
     </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cbApple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="蘋果"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cbBanana" />
+
+    <CheckBox
+        android:id="@+id/cbBanana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="香蕉"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toStartOf="@+id/cbOrange"
+        app:layout_constraintStart_toEndOf="@+id/cbApple"
+        app:layout_constraintTop_toBottomOf="@+id/rgSex" />
+
+    <CheckBox
+        android:id="@+id/cbOrange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="橘子"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cbBanana" />
 </androidx.constraintlayout.widget.ConstraintLayout>
