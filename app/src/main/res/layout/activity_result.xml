@@ -12,10 +12,9 @@
         android:layout_height="wrap_content"
         android:text=""
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/ivShow" />
 
     <ImageView
         android:id="@+id/ivShow"
@@ -26,4 +25,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/a2" />
+
+    <Button
+        android:id="@+id/btGoback"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="Goback"
+        android:text="@string/goBack"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvShowBMI" />
 </androidx.constraintlayout.widget.ConstraintLayout>
