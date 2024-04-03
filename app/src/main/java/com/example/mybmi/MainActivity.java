@@ -45,28 +45,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        appple.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                getFruits();
-
-
-            }
-        });
-        banana.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                getFruits();
-            }
-        });
-        orange.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                getFruits();
-
-            }
-        });
+        appple.setOnCheckedChangeListener((buttonView, isChecked) -> getFruits());
+        banana.setOnCheckedChangeListener((buttonView, isChecked) -> getFruits());
+        orange.setOnCheckedChangeListener((buttonView, isChecked) -> getFruits());
     }
 
     private void getFruits() {
