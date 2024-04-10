@@ -30,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox apple;
     private CheckBox banana;
     private CheckBox orange;
+    private String[] sex = {"男生", "女生"};
+    private String[] fruits = {"蘋果", "香蕉", "橘子"};
+    private boolean[] fruitsSelected = {false, false, false};
+
+    private int sexSelected = 0;
 
 
     @SuppressLint("NonConstantResourceId")
@@ -74,17 +79,40 @@ public class MainActivity extends AppCompatActivity {
         builder.setTitle("BMI");
         double bmi = getBmi();
         String result = getString(R.string.strShowbmi) + bmi;
-        builder.setMessage(result);
+          //顯示訊息
+//        builder.setMessage(result);
+         // 顯示單選
+//        builder.setSingleChoiceItems(sex, sexSelected, new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                sexSelected = which;
+//            }
+//        });
+        // 顯示多選
+        builder.setMultiChoiceItems(fruits, fruitsSelected, new DialogInterface.OnMultiChoiceClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+                fruitsSelected[which] = isChecked;
+            }
+        });
+
         builder.setPositiveButton("確定", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this, "你好", Toast.LENGTH_SHORT).show();
+
+                Toast.makeText(MainActivity.this, sex[sexSelected], Toast.LENGTH_SHORT).show();
             }
         });
         builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this, "取消", Toast.LENGTH_SHORT).show();
+                String msg = "";
+                for (int i = 0; i < fruitsSelected.length; i++) {
+                    if (fruitsSelected[i]) {
+                        msg += fruits[i];
+                    }
+                }
+                Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
             }
         });
 
